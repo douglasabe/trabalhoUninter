@@ -1,0 +1,318 @@
+<!--Define documento HTML, idioma português BR-->
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<!--COntém informações da página, permissão de uso de acentos e visualização responsiva-->
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- Titulo aba do navegador-->
+    <title>Currículo Douglas Abe</title>
+
+    <!--Propriedades dos elementos da página, remoção da margem e espaçãmento dos elementos, preenchimento e a borda na largura e altura-->
+    <style type="text/css">
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /*formatação flexivel dos elementos*/
+        body{
+            display: flex;
+            flex-wrap: wrap;
+            flex: 1 1 100vw;
+            margin: 3px;
+        }
+
+        /*formatação similar dos elementos */
+        header, nav, main, aside, footer {
+            display: flex;
+            margin: 3px;
+        }
+
+        /*formatação flexivel dos elementos*/
+        header{
+            flex: 1 1 100vw;
+            background: black;
+        }
+
+        /*formatação flexivel dos elementos*/
+        header #foto {
+            display: flex;
+            flex: 0 1 200px;
+            background: black;
+            justify-content: center;
+            align-items: center;
+        }
+
+        /*formatação de borda e cor, muda curso do mouse*/
+        #openMenu, #closeMenu {
+            border: none;
+            background: rgb(8, 8, 8);
+            font-size: 30px;
+            font-weight: bold;
+            padding: 0px 5px;
+            cursor: pointer;
+            display: none;
+            color: white;
+
+        }
+        /*formatação flexivel e alinhamento dos elementos*/
+        nav{
+            background: black;
+            background-color: black;
+            justify-content: flex-end;
+            align-items: center;
+            flex: 1 1 200px;
+                                   
+        }
+        /*formatação dos elementos*/
+        nav a{
+            margin: 0 3%;
+            font-size: 15pt;
+            color: white;
+            text-decoration: none;
+        }
+        /*fomatação flexivel*/
+        main{
+            flex: 20 1 500px; 
+        }
+        /*fomatação flexivel*/
+        aside{
+            flex:1 1 200px;
+        }
+        /*fomatação flexivel*/
+        footer{
+            flex: 1 1 100vw;
+            
+         }
+
+    /* Altera o estilo dos elementos para serem apresentados de acordo com o tamanho da tela, ajuste de posicionamento dos elementos*/     
+    @media only screen and (max-width: 717px) {
+        #openMenu, #closeMenu {
+            
+            display: block;
+        }
+
+        #openMenu {
+           
+            margin-left: auto;
+        }
+
+        #closeMenu {
+            
+            position: fixed;
+            right: 15px;
+            top: 15px;
+        }
+        
+        /*alinhamento, posicioinamento e ocupação dos elementos na tela*/
+        nav {
+            position: fixed;
+            width: 100vw;
+            height: 100vh;
+            background: rgba(34, 33, 33, 0.8);
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            margin: 0;
+            display: none;
+            opacity: 0;
+            transition: 0.3s;
+        }
+
+        /* Margem de todos os lados. */
+        nav a {
+            margin: 3%;
+        }
+    }
+
+    /*formatação similar dos elementos */
+    #infoProfissional, #formacoes, #infoPessoais, #pessoal, #rodape {
+        background-color: black;
+        color: white;
+        text-align: center;
+    }
+
+   /*formatação similar dos elementos */
+    #cabecalho, #datas {
+        background: rgb(187, 185, 185);
+        color: rgb(58, 57, 57);
+        text-align: center;
+    }
+
+    /*formatação similar dos elementos */
+    #cargos, #cursos {
+        font-size: 16px;
+        text-align: left;
+    }
+
+    /*alinhamento dos textos do rodape*/
+    #rodape {
+        text-align: left;
+    }
+
+    /*formatação de tabela referente ao formulário*/
+    table {
+        width: 580px;
+        padding: 10px;
+        background-color: #c5e7e0;
+        }
+
+        th {
+        text-align: left;
+        border-bottom: 1px solid;
+        }
+
+        td {
+        padding: 10px;
+        }
+
+
+    </style>
+</head>
+<body>
+    <header>
+        <!--Import foto perfil currículo-->
+        <img src="douglas.jpg" id="foto">
+        
+        <!--botão navegação menu flutuande que surge quando a tela é reduzida-->
+        <button id="openMenu">&#9776;</button>
+        <nav id="menu">
+            <button id="closeMenu">X</button>
+            <a href="#infoProfissional">Informações Profissionais</a>
+            <a href="#formacoes">Formações</a>
+            <a href="#infoPessoais">Informações Pessoais</a>
+            <a href="#rodape">Contato</a>
+        </nav>
+
+    </header>
+    
+    <main>
+        <!--Dados referentes à experiencia profissional-->
+        <div>
+            <h1  a id="infoProfissional">Informações Profissionais</h1><br>
+            <h3 id="cabecalho">Intermédica Sistema de Saúde</h3>
+            <h4 id="datas">junho de 2007 - junho de 2010</h4>
+            <h5 id="cargos">Assistente de Credenciamento</h5>
+            <p>Análises de propostas de reajustes, Planilhas e estudos de impacto de reajustes, análises de tabelas de procedimentos, negociações de tabelas de serviços, análises de aditivos e contratos.</p><br>
+                    
+            <h3 id="cabecalho">Qualicorp Corretora de Seguros </h3>
+            <h4 id="datas">junho de 2010 - setembro de 2015</h4>
+            <h5 id="cargos">Agente de Atendimento - junho de 201 - novembro 2011</h5>
+            <p>Atendimento para carteira de cliente no benefício de saúde, movimentações cadastrais, controle de reembolsos, acompanhamento para liberação de procedimentos, integração de novos colaboradores e auxílio na implantação do benefício.</p><br>
+            <h5 id="cargos">Assistente de Projetos - novembro de 2011 - junho de 2013</h5>
+            <p>Análise de base de dados e ajustes para cotação, auxílio na elaboração de rede credenciada.</p><br>
+            <h5 id="cargos">Analista de projetos - junho de 2013 – setembro 2015</h5>
+            <p>Cotação de mercado em benefícios seguráveis, elaboração de rede credenciada, realização de comparativos de condições gerais e coberturas.</p><br>
+
+            <h3 id="cabecalho">D'Or Consultoria</h3>
+            <h4 id="datas">setembro de 2015 – junho de 2019</h4>
+            <h5 id="cargos">Analista de Projetos II</h5>
+            <p>Responsável pela análise contratual, política dos benefícios , junto com mapeamento e elaboração de projetos de forma detalhada, nos ramos de assistência médica, odontológica, seguro viagem, PBM, acidentes pessoais e seguro de vida em grupo – para apresentar melhor opção de desenho/redesenho, identificar e atuar nos impactos das mudanças (positivos ou negativos), análise e elaboração de rede credenciada qualitativa e quantitativa das localidades de acordo com a distribuição das vidas, negociação junto às operadoras/seguradoras para obtenção das melhores propostas de mercado com base no perfil e risco do cliente,  conhecimento nos produtos e serviços das operadoras/seguradoras, envio de solicitação ao mercado, e conferência das propostas de acordo com a estratégia elaborada, elaboração/personalização em excel/ppt: 
+            construção de planilhas inteligentes para controle do fluxo da área e indicadores, criação de banco de dados com precificação faixa etária e 
+            custo médio por ramo de atividade, faixa etária e custo médio, materiais e comparativos para diretoria da corretora e executivos da Rede D’Or São Luiz.</p><br>
+
+            <h3 id="cabecalho">GESTO – Gestão Inteligente de planos de Saúde</h3>
+            <h4 id="datas">Junho de 2019 – dezembro de 2019</h4>
+            <h5 id="cargos">Customer Success</h5>
+            <p>Start Up Helthtech com viés em consultoria através de dados, Consultoria na carteira de clientes avaliando e construindo relatórios gerenciais e Comitês de saúde, realização e análises da apólice, auxílio no desenvolvimento de ambulatórios médicos e rede credenciada própria.</p><br>
+
+            <h3 id="cabecalho">It’s Seg Seguros Inteligentes</h3>
+            <h4 id="datas">fevereiro de 2020 – maio de 2021</h4>
+            <h5 id="cargos">Consultor de Negócios Sr</h5>
+            <p>Foco em negociação com as operadoras para obtenção de melhor condição de reajuste para o cliente, elaboração de cálculos preditivos de reajustes, análise de mercado e novas soluções em benefícios para os clientes produtos regulamentados ou não.
+                Reunião para apresentação dos relatórios de negociação e condições para os times internos e clientes externos.</p><br>
+
+            <h3 id="cabecalho">Aon Holdings</h3>
+            <h4 id="datas">Atual</h4>
+            <h5 id="cargos">Consultor de Produto e BI</h5>
+            <p>Participação na criação e desenvolvimentos de produtos junto às operadoras de saúde e dental para entrega de soluções em benefícios para os clientes, prospecção de fornecedores e parceiros nacionais e internacionais regulamentados ou não pela ANS.
+                Extração de dados e elaboração de indicadores dos portais ANS e IBGE para mapeamento de possíveis parceiros nas regiões onde a AON possui filiais.
+                Criação e estruturação de banco de dados para elaboração dos KPI’s utilizados em reuniões semanais pela diretoria regional LATAM.
+                Criação de KPI’s em Excel e Power BI.</p><br>
+            
+            <h1 a id="formacoes">Formaçoes</h1><br>
+            <h3 id="cabecalho">Unicid - Universidade Cidade de São Paulo</h3>
+            <h4 id="datas">fevereiro de 2010 – junho de 2014</h4>
+            <h5 id="cursos">Administração Geral</h5>
+
+            <h3 id="cabecalho">Faculdade Metropolina</h3>
+            <h4 id="datas">julho de 2022 – junho de 2023</h4>
+            <h5 id="cursos">Pós Graduação em Big Data e Ciência de Dados</h5>
+
+            <h3 id="cabecalho">Uninter</h3>
+            <h4 id="datas">junho de 2024 – em curso</h4>
+            <h5 id="cursos">Anáise e Desenvolvimento de Sistemas</h5>
+
+        </div>
+    </main>
+    <aside>
+        <!--dado pessoais-->
+        <div id="pessoal">
+            <h1 a id="infoPessoais">Informações Pessoais</h1><br>
+            <h3>Douglas Estevam Abe</h3>
+            <p>Rua Correa da Camara, 452 - Apto 1706</p><br>
+            <p>Vila Tolstoi - São Paulo - SP</p><br>
+        </div>
+
+    </aside>
+
+    <footer>
+        <!-- rodape formulario para contato-->
+        <table id="rodape" border= "0" cellpadding="5" cellspacing="2">
+            <thead>
+                <tr>
+                    <th colspan="2">Contato</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Nome:</td>
+                    <td><input type="text" name="name" /></td>
+                </tr>
+                <tr>
+                    <td>Email:</td>
+                    <td><input type="email" name="email" /></td>
+                </tr>
+                <tr>
+                    <td>Mensagem:</td>
+                    <td><textarea type="text" name="mensagem" ></textarea>
+                </tr>
+
+                <tr>
+                    <td colspan="2" align="center"><input type="submit" value="Enviar" />
+                
+                    </td>                        
+                </tr>                    
+            </tbody>
+        </table>
+    </footer>
+    <script>
+        /*formatação do botão flutuante do meno que surge quando a tela é reduzida*/
+        openMenu.addEventListener('click', () =>{
+            menu.style.display = 'flex'
+
+            menu.style.right = (menu.offsetWidth * -1) + 'px'
+            setTimeout(() => {
+                menu.style.opacity = '1'
+                menu.style.right = '0'
+            }, 10)
+            
+        })
+
+        closeMenu.addEventListener('click', () =>{
+            menu.style.opacity = '0'
+            menu.style.right = (menu.offsetWidth * -1) + 'px'
+
+            setTimeout(() => {
+                menu.removeAttribute('style')    
+            }, 200)
+            
+        })
+
+    </script>
+</body>
+</html>
